@@ -40,7 +40,7 @@ def find_edu_skills(job_df,skills_df,education):
 
 def find_job_skills(job_lookup,skills_df,job):
 
-    job_link = job_lookup.loc[job_lookup['top_jobs'] == job]
+    job_link = job_lookup.loc[job_lookup['top_jobs'] == job.lower()]
 
     merged_df = pd.merge(left=job_link,
                          right=skills_df,
@@ -59,3 +59,17 @@ def find_job_skills(job_lookup,skills_df,job):
 
     return job_skill_values
 
+def get_description(job_lookup,df,job):
+
+    job_link = job_lookup['link'].loc[job_lookup['top_jobs'] == job.lower()]
+
+    merged_df = pd.merge(left=job_link,
+                         right=df,
+                         how='left',
+                         left_on='link',
+                         right_on='link')
+
+
+    description = merged_df['description'][0]
+
+    return description

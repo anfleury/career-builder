@@ -86,123 +86,17 @@
                  <div class="clearfix">
                        <button type="submit" class="btn btn-primary float-right" form="user_input">Explore</button>
                 </div>
-
-          {% if my_form_result=='Empty' %}
-          <div class="row mt-4 justify-content-center">
-                <h4 class="text-danger text-center text-uppercase">You did not type anything!</h4>
-          </div>
-
-          {% elif my_form_result=='NotEmpty' %}
-
-          <section class="map-section bg-black" id="map">
-              <div class="row justify-content-center no-gutters mt-0">
-                  <div class="chart" id="bargraph">
-                      <script>
-                          var graphs = {{sankey | safe}};
-                      </script>
-                  </div>
-              </div>
-          </section>
-
-          <!-- Results -->
-          <hr>
-
-          <a>
-            <h2 class="post-title">Have you ever considered a career in any of the following areas?
-            </h2>
-            <h3 class="post-subtitle">(Click each item below to find out more)
-            </h3>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job1}}">{{job1}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job2}}">{{job2}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job3}}">{{job3}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job4}}">{{job4}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job5}}">{{job5}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job6}}">{{job6}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job7}}">{{job7}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job8}}">{{job8}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job9}}">{{job9}}</button></form>
-            </li>
-            <li>
-              <form action="/job-details" method="POST"><button class="btn" type="submit" name="job" value="{{job10}}">{{job10}}</button></form>
-            </li>
-          </a>
-
-          {% else %}
-          {% endif %}
-
-          {% if button_result=='Empty' %}
-          <div class="row mt-4 justify-content-center">
-                <h4 class="text-danger text-center text-uppercase">You did not type anything!</h4>
-          </div>
-
-          {% elif button_result=='NotEmpty' %}
-
-          <div class="post-preview">
-          <a>
-            <h2 class="post-title">
-              {{interest_job}}
-            </h2>
-
-            <div class="row">
-              <div class="column">
-
-                <h3 class="post-subtitle">Skills from {{degree}}</h3>
-                  {% for skill in edu_skills%}
-                  <li>
-                  {{ skill }}
-                  </li>
-                  {% endfor %}
-                </div>
-
-                <hr>
-
-              <div class="column">
-                <h3 class="post-subtitle">Skills for {{interest_job}}</h3>
-                  {% for skill in job_skills%}
-                  <li>
-                  {{ skill }}
-                  </li>
-                  {% endfor %}
-                </div>
-
-                <hr>
-            </div>
-            <h3 class="post-subtitle">Skills to work on</h3>
-            {% for each in new_skills %}
-            <li>
-            {{ each }}
-            </li>
-            {% endfor %}
-          </a>
-          </div>
-
-          {% else %}
-          {% endif %}
-
-        </div>
         </div>
       </div>
     </div>
   </div>
 
-  <hr>
+
+
+
+          <!-- Results -->
+
+
 
   <!-- Footer -->
   <footer>

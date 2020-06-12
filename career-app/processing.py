@@ -28,6 +28,11 @@ def build_sankey(df, degree):
 
     filename = 'static/{}.png'.format(degree)
 
+    fig.update_layout(
+    autosize=False,
+    width=800,
+    height=800)
+
     div = fig.to_html()
 
     return div
@@ -57,3 +62,4 @@ def uniqueness(df1,df2,group):
     results = sorted_df['top_jobs'][0:10]
 
     return list(results)
+

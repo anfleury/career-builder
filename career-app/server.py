@@ -7,6 +7,7 @@ from processing import uniqueness
 from skills import convert_to_list
 from skills import find_edu_skills
 from skills import find_job_skills
+from skills import get_description
 
 # Create the application object
 app = Flask(__name__)
@@ -25,7 +26,7 @@ def recommendation_output():
 
     # Case if empty
     if degree =="":
-      return render_template("index.html",
+      return render_template("results.html",
                               my_input = degree,
                               my_form_result="Empty")
     else:
@@ -39,7 +40,7 @@ def recommendation_output():
       results = uniqueness(df1,df2,degree)
 
 
-      return render_template("index.html",
+      return render_template("results.html",
                           my_input=degree,
                           sankey=fig,
                           job1=results[0],
@@ -67,6 +68,9 @@ def job_details():
 
     skills_df = convert_to_list(skills,['expertise','skills','knowledge'])
     job_lookup = job_name_df[['top_jobs','link']].drop_duplicates()
+    job_lookup['top_jobs'] = job_lookup['top_jobs'].str.lower()
+
+    description_df = pd.read_csv(os.path.join(data_path,'processed','job-description.csv'))
 
     # Pull input
     if request.method == 'POST':
@@ -77,14 +81,17 @@ def job_details():
       job_skill_dict = find_job_skills(job_lookup,skills_df,alt_job)
 
       edu_skill_sort = sorted(list(edu_skill_dict.keys()))
-      job_skill_sort = sorted(list(edu_skill_dict.keys()))
+      job_skill_sort = sorted(list(job_skill_dict.keys()))
 
       new_skills = set(job_skill_dict.keys()) - set(edu_skill_dict.keys())
       result = sorted(list(new_skills))
 
+      description = get_description(job_lookup,description_df,alt_job)
+
       if alt_job is not None:
-          return render_template("index.html",
+          return render_template("results.html",
                                  degree=degree,
+                                 job_desc=description,
                                  interest_job=alt_job,
                                  edu_skills=edu_skill_sort,
                                  job_skills=job_skill_sort,
