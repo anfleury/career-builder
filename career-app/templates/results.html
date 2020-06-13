@@ -30,7 +30,7 @@
         border: none;
         color: white;
         padding: 10px 20px;
-        text-align: center;
+        text-align: left;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
@@ -95,12 +95,26 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
-          {% if my_form_result=='Empty' %}
+          {% if my_form_result==1 %}
           <div class="row mt-4 justify-content-center">
                 <h2 class="section-heading">You did not type anything.</h2>
           </div>
 
-          {% elif my_form_result=='NotEmpty' %}
+          {% elif my_form_result==2 %}
+
+          <div class="row mt-4 justify-content-center">
+                <h2 class="section-heading">That input matches a number of degrees</h2>
+                <blockquote class="blockquote">Choose the closest match from the options below</blockquote>
+                <div class="row">
+                  {% for edu in matches %}
+                  <p>
+                    <form action="/suggestions" method="POST"><button class="button button4 text-center" type="submit" name="user_input" value="{{edu}}">{{edu}}</button></form>
+                  </p>
+                  {% endfor %}
+                </div>
+          </div>
+
+          {% elif my_form_result==3 %}
 
           <h2 class="section-heading">{{my_input}}</h2>
 

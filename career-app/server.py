@@ -1,4 +1,4 @@
-from flask import Flask, session, render_template, request
+from flask import Flask, session, render_template, request, jsonify
 import os
 import pandas as pd
 import numpy as np
@@ -9,36 +9,54 @@ from skills import find_edu_skills
 from skills import find_job_skills
 from skills import get_description
 
+import wtforms as wt
+from wtforms import TextField, Form
+
 # Create the application object
 app = Flask(__name__)
 app.secret_key = 'random'
+
+# Load education and occupation details
+overview = pd.read_csv('./static/job-overview.csv')
+description = pd.read_csv('./static/job-description.csv')
+#regulation = pd.read_csv('./static/job-regulation.csv')
+skills = pd.read_csv('./static/job-skills.csv')
+job_name_df = pd.read_csv('./static/education-to-job.csv')
+df1 = pd.read_csv('./static/model-1.csv')
+df2 = pd.read_csv('./static/model-2.csv')
 
 
 @app.route('/',methods=["GET","POST"])
 def home_page():
     return render_template('index.html')  # render a template
 
+
 @app.route('/suggestions',methods=["GET","POST"])
 def recommendation_output():
 #
     # Pull input
-    degree =request.args.get('user_input')
+    if request.method == 'GET':
+      edu_input =request.args.get('user_input')
+    elif request.method == 'POST':
+      edu_input = request.form.get('user_input')
+    else:
+      edu_input = ''
+
+    edu_names = list(job_name_df['education_groups'].unique())
+    education_match = sorted([s for s in edu_names if edu_input.lower() in s.lower()])
 
     # Case if empty
-    if degree =="":
-      return render_template("results.html",
-                              my_input = degree,
-                              my_form_result="Empty")
-    else:
-      session['degree'] = degree
+    if not edu_input:
+      return render_template('results.html',
+                              my_input = edu_input,
+                              my_form_result=1)
 
-      job_name_df = pd.read_csv('/Users/amanda/Documents/Projects/insight/data/processed/education-to-job.csv')
-      df1 = pd.read_csv('/Users/amanda/Documents/Projects/insight/data/processed/model-1.csv')
-      df2 = pd.read_csv('/Users/amanda/Documents/Projects/insight/data/processed/model-2.csv')
+    elif len(education_match) == 1:
+      degree = education_match[0]
+      session['degree'] = degree
 
       fig = build_sankey(job_name_df, degree)
       results = uniqueness(df1,df2,degree)
-
 
       return render_template("results.html",
                           my_input=degree,
@@ -53,7 +71,15 @@ def recommendation_output():
                           job8=results[7],
                           job9=results[8],
                           job10=results[9],
-                          my_form_result="NotEmpty")
+                          my_form_result=3)
+
+    else:
+      # Save the variable in the session so we can use it later
+
+      return render_template("results.html",
+                          my_input=edu_input,
+                          matches=education_match,
+                          my_form_result=2)
 
 @app.route('/job-details',methods=["GET","POST"])
 def job_details():
