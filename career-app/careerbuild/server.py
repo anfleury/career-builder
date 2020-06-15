@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from careerbuild.careerbuild.processing import build_sankey
 from careerbuild.careerbuild.processing import uniqueness
+from careerbuild.careerbuild.processing import find_closest_match
 from careerbuild.careerbuild.skills import convert_to_list
 from careerbuild.careerbuild.skills import find_edu_skills
 from careerbuild.careerbuild.skills import find_job_skills
@@ -50,6 +51,13 @@ def recommendation_output():
                               my_input = edu_input,
                               my_form_result=1)
 
+    elif len(education_match) == 0:
+      close_match = find_closest_match(edu_input,edu_names)
+      return render_template('results.html',
+                              my_input = edu_input,
+                              matches = close_match,
+                              my_form_result=2)
+
     elif len(education_match) == 1:
       degree = education_match[0]
       session['degree'] = degree
@@ -70,15 +78,14 @@ def recommendation_output():
                           job8=results[7],
                           job9=results[8],
                           job10=results[9],
-                          my_form_result=3)
+                          my_form_result=4)
 
     else:
-      # Save the variable in the session so we can use it later
 
       return render_template("results.html",
                           my_input=edu_input,
                           matches=education_match,
-                          my_form_result=2)
+                          my_form_result=3)
 
 @app.route('/job-details',methods=["GET","POST"])
 def job_details():

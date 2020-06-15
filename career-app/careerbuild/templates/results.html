@@ -103,6 +103,20 @@
           {% elif my_form_result==2 %}
 
           <div class="row mt-4 justify-content-center">
+                <h2 class="section-heading">Sorry, we don't have any information about '{{my_input}}'.</h2>
+                <blockquote class="blockquote">Is there an area of study below that matches your experience?</blockquote>
+                <div class="row">
+                  {% for edu in matches %}
+                  <p>
+                    <form action="/suggestions" method="POST"><button class="button button4 text-center" type="submit" name="user_input" value="{{edu}}">{{edu}}</button></form>
+                  </p>
+                  {% endfor %}
+                </div>
+          </div>
+
+          {% elif my_form_result==3 %}
+
+          <div class="row mt-4 justify-content-center">
                 <h2 class="section-heading">That input matches a number of degrees</h2>
                 <blockquote class="blockquote">Choose the closest match from the options below</blockquote>
                 <div class="row">
@@ -114,7 +128,7 @@
                 </div>
           </div>
 
-          {% elif my_form_result==3 %}
+          {% elif my_form_result==4 %}
 
           <h2 class="section-heading">{{my_input}}</h2>
 

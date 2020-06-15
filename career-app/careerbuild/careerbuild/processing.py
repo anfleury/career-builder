@@ -2,6 +2,7 @@ import json
 import plotly
 import plotly.graph_objs as go
 from scipy import spatial
+from fuzzywuzzy import process
 
 
 def build_sankey(df, degree):
@@ -62,4 +63,11 @@ def uniqueness(df1,df2,group):
     results = sorted_df['top_jobs'][0:10]
 
     return list(results)
+
+def find_closest_match(usr_input,name_list):
+
+    highest = process.extract(usr_input,name_list)[0:5]
+    topmatches = [x[0] for x in highest]
+
+    return topmatches
 
