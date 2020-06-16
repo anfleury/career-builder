@@ -33,17 +33,20 @@ def home_page():
 
 @app.route('/suggestions',methods=["GET","POST"])
 def recommendation_output():
+
+    education_match = ['']
 #
     # Pull input
     if request.method == 'GET':
       edu_input =request.args.get('user_input')
+      edu_names = list(job_name_df['education_groups'].unique())
+      education_match = sorted([s for s in edu_names if edu_input.lower() in s.lower()])
     elif request.method == 'POST':
       edu_input = request.form.get('user_input')
+      education_match[0] = edu_input
     else:
       edu_input = ''
 
-    edu_names = list(job_name_df['education_groups'].unique())
-    education_match = sorted([s for s in edu_names if edu_input.lower() in s.lower()])
 
     # Case if empty
     if not edu_input:
@@ -51,6 +54,7 @@ def recommendation_output():
                               my_input = edu_input,
                               my_form_result=1)
 
+    # No match found for user input, use fuzzy matching
     elif len(education_match) == 0:
       close_match = find_closest_match(edu_input,edu_names)
       return render_template('results.html',
@@ -58,6 +62,7 @@ def recommendation_output():
                               matches = close_match,
                               my_form_result=2)
 
+    # Only one match found for user input, return job details
     elif len(education_match) == 1:
       degree = education_match[0]
       session['degree'] = degree
@@ -80,8 +85,8 @@ def recommendation_output():
                           job10=results[9],
                           my_form_result=4)
 
+    # More than one match found, return all matches and allow the user to choose the open that makes the most sense
     else:
-
       return render_template("results.html",
                           my_input=edu_input,
                           matches=education_match,
