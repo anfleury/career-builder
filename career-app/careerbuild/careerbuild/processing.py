@@ -1,42 +1,9 @@
-import json
-import plotly
-import plotly.graph_objs as go
+
 from scipy import spatial
 from fuzzywuzzy import process
 
 
-def build_sankey(df, degree):
 
-    data = df.where(df['education_groups']==degree).dropna()
-
-    all_nodes = data['identifier'].values.tolist() + data['top_jobs'].values.tolist()
-    source_indices = [all_nodes.index(identifier) for identifier in data['identifier']]
-    target_indices = [all_nodes.index(top_job) for top_job in data['top_jobs']]
-
-    fig = go.Figure(data=[go.Sankey
-                          (node = dict(pad = 15,
-                                       thickness = 20,
-                                       line = dict(color = "black",
-                                                   width = 0),
-                                       label = all_nodes,
-                           ),
-                           link = dict(source = source_indices,
-                                       target = target_indices,
-                                       value = data['job_percent']*100)
-                          )
-                         ]
-                   )
-
-    filename = 'static/{}.png'.format(degree)
-
-    fig.update_layout(
-    autosize=False,
-    width=800,
-    height=800)
-
-    div = fig.to_html()
-
-    return div
 
 def uniqueness(df1,df2,group):
 

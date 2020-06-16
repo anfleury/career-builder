@@ -2,9 +2,9 @@ from flask import Flask, session, render_template, request, jsonify
 import os
 import pandas as pd
 import numpy as np
-from careerbuild.careerbuild.processing import build_sankey
 from careerbuild.careerbuild.processing import uniqueness
 from careerbuild.careerbuild.processing import find_closest_match
+from careerbuild.careerbuild.custom_plots import build_sankey
 from careerbuild.careerbuild.skills import convert_to_list
 from careerbuild.careerbuild.skills import find_edu_skills
 from careerbuild.careerbuild.skills import find_job_skills
