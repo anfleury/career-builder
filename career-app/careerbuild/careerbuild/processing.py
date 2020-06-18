@@ -1,9 +1,5 @@
-
 from scipy import spatial
 from fuzzywuzzy import process
-
-
-
 
 def uniqueness(df1,df2,group):
 

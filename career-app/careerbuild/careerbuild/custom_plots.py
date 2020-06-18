@@ -35,7 +35,7 @@ def build_sankey(df, degree):
     target_indices = [all_nodes.index(top_job) for top_job in data['top_jobs']]
 
     cmap = get_cmap_string(palette='plasma_r', domain=all_nodes)
-    cmap2 = list(map(adjust_lightness, cmap))
+    #cmap2 = list(map(adjust_lightness, cmap))
 
     fig = go.Figure(data=[go.Sankey
                           (node = dict(pad = 15,
@@ -48,7 +48,7 @@ def build_sankey(df, degree):
                            link = dict(source = source_indices,
                                        target = target_indices,
                                        value = data['job_percent']*100,
-                                       color = ['rgb' + str(s).strip('[]') for s in cmap2]
+                                       #color = ['rgb' + str(s).strip('[]') for s in cmap2]
                                        ),
                           )
                          ]
