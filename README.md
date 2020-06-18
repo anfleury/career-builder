@@ -28,7 +28,7 @@ App can then be run locally using:
 
 Enter your degree on the homepage to get a visualization of the most common jobs for your given degree.
 
-<img src="notebooks/figures/app-sankey.png"></img>
+<img src="notebooks/figures/app-sankey2.png"></img>
 
 The app will also load recommendations for uncommon jobs you may want to consider.
 
