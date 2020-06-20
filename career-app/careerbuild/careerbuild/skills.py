@@ -19,13 +19,13 @@ def find_edu_skills(job_df,skills_df,education):
     merged_df = pd.merge(left=education_jobs,
                          right=skills_df,
                          how='left',
-                         left_on='link',
-                         right_on='link')
+                         left_on='noc',
+                         right_on='noc')
 
     merged_df_unique = merged_df.drop_duplicates(subset=['link'])
 
-    skills_expanded = merged_df_unique[['link',
-                                        'degree',
+    skills_expanded = merged_df_unique[['noc',
+                                        'edu_level',
                                         'education_groups',
                                         'top_jobs',
                                         'job_percent',
@@ -40,19 +40,19 @@ def find_edu_skills(job_df,skills_df,education):
 
 def find_job_skills(job_lookup,skills_df,job):
 
-    job_link = job_lookup.loc[job_lookup['top_jobs'] == job.lower()]
+    job_link = job_lookup.loc[job_lookup['job_group'] == job.lower()]
 
     merged_df = pd.merge(left=job_link,
                          right=skills_df,
                          how='left',
-                         left_on='link',
-                         right_on='link')
+                         left_on='noc',
+                         right_on='noc')
 
 
-    merged_df_unique = merged_df.drop_duplicates(subset=['link'])
+    merged_df_unique = merged_df.drop_duplicates(subset=['noc'])
 
-    skills_expanded = merged_df_unique[['link',
-                                        'top_jobs',
+    skills_expanded = merged_df_unique[['noc',
+                                        'job_group',
                                         'skills']].explode('skills')
 
     job_skill_values = skills_expanded['skills'].value_counts().to_dict()
@@ -61,13 +61,13 @@ def find_job_skills(job_lookup,skills_df,job):
 
 def get_description(job_lookup,df,job):
 
-    job_link = job_lookup['link'].loc[job_lookup['top_jobs'] == job.lower()]
+    job_link = job_lookup['noc'].loc[job_lookup['job_group'] == job.lower()]
 
     merged_df = pd.merge(left=job_link,
                          right=df,
                          how='left',
-                         left_on='link',
-                         right_on='link')
+                         left_on='noc',
+                         right_on='noc')
 
 
     description = merged_df['description'][0]

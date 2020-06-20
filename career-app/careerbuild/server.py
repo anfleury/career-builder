@@ -17,7 +17,7 @@ from careerbuild import app
 app.secret_key = 'random'
 
 # Load education and occupation details
-overview_df = pd.read_csv('./careerbuild/static/job-overview.csv')
+overview_df = pd.read_csv('./careerbuild/static/noc-overview.csv')
 description_df = pd.read_csv('./careerbuild/static/job-description.csv')
 #regulation = pd.read_csv('./static/job-regulation.csv')
 skills_df = pd.read_csv('./careerbuild/static/job-skills.csv')
@@ -28,7 +28,8 @@ df2 = pd.read_csv('./careerbuild/static/model-2.csv')
 
 @app.route('/',methods=["GET","POST"])
 def home_page():
-    return render_template('index.html')  # render a template
+    hobbies = ['birdwatching','photography','team sports','']
+    return render_template('index.html',hobbies=hobbies)  # render a template
 
 
 @app.route('/suggestions',methods=["GET","POST"])
@@ -101,8 +102,8 @@ def job_details():
                                     ['expertise',
                                     'skills',
                                     'knowledge'])
-    job_lookup = job_name_df[['top_jobs','link']].drop_duplicates()
-    job_lookup['top_jobs'] = job_lookup['top_jobs'].str.lower()
+    job_lookup = overview_df[['job_group','noc']].drop_duplicates()
+    job_lookup['job_group'] = job_lookup['job_group'].str.lower().str.strip()
 
     # Pull input
     if request.method == 'POST':
