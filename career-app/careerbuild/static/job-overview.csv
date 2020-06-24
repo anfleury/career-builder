@@ -628,6 +628,7 @@ link,noc,job_title,salary
 /7638/ca,NOC 7316,Textile Machinery Fitter,29.44
 /7639/ca,NOC 7316,Turbine Fitter,29.44
 /7640/ca,NOC 7316,Locomotive Fitter,29.44
+/7641/ca,NOC 7316,Food-processing Machine Fitter,29.44
 /7642/ca,NOC 7316,Mining Machinery Fitter,29.44
 /7643/ca,NOC 7316,"Fitter, Ship Machinery",29.44
 /7644/ca,NOC 7316,Logging Machinery Fitter,29.44
@@ -730,7 +731,6 @@ link,noc,job_title,salary
 /7741/ca,NOC 7332,Electrical Appliance Serviceman/woman,22.4
 /7742/ca,NOC 7332,Washing Machine Repairman/woman,22.4
 /7743/ca,NOC 7332,Household Electrical Appliance Repairman/woman,22.4
-/7744/ca,NOC 7332,Major Electrical Appliance Servicer,22.4
 /7745/ca,NOC 7332,Refrigerator Repairer,22.4
 /7746/ca,NOC 7332,Domestic Refrigerator Servicer,22.4
 /7747/ca,NOC 7332,Service Technician - Electrical Appliances,22.4
@@ -851,7 +851,6 @@ link,noc,job_title,salary
 /7865/ca,NOC 7361,"Engineer Trainee, Railway",37.5
 /7866/ca,NOC 7361,Industrial Locomotive Engineer,37.5
 /7867/ca,NOC 7361,Train Engineer,37.5
-/7869/ca,NOC 7361,Railway Engineer,37.5
 /7871/ca,NOC 7361,Railway Locomotive Engineer,37.5
 /7872/ca,NOC 7362,Brake Worker - Switching Yard,33.65
 /7873/ca,NOC 7362,Railway Conductor,33.65
@@ -3373,7 +3372,6 @@ link,noc,job_title,salary
 /10653/ca,NOC 9423,"Boot Maker, Rubber",20.0
 /10654/ca,NOC 9423,Braiding Machine Tender - Rubber Products Manufacturing,20.0
 /10655/ca,NOC 9423,Strap Machine Tender - Rubber Products Manufacturing,20.0
-/10656/ca,NOC 9423,Rubber Footwear Parts Buffer,20.0
 /10657/ca,NOC 9423,Calender Let-off Operator - Rubber Products Manufacturing,20.0
 /10658/ca,NOC 9423,Calender Machine Operator - Rubber Products Manufacturing,20.0
 /10659/ca,NOC 9423,Calender Roll Warmer - Rubber Products Manufacturing,20.0
@@ -3655,6 +3653,7 @@ link,noc,job_title,salary
 /10936/ca,NOC 9432,Assistant Bleacher Operator - Pulp And Paper,30.0
 /10937/ca,NOC 9432,Assistant Digester Operator,30.0
 /10938/ca,NOC 9432,Beater Operator - Pulp And Paper,30.0
+/10939/ca,NOC 9432,Bleach Boiler Tender,30.0
 /10940/ca,NOC 9432,Bleacher Tender - Pulp And Paper,30.0
 /10941/ca,NOC 9432,"Bleacher, Rag Stock",30.0
 /10942/ca,NOC 9432,Blow Pit Tender - Pulp And Paper,30.0
@@ -3795,7 +3794,6 @@ link,noc,job_title,salary
 /11209/ca,NOC 9447,Cloth Sorter,15.0
 /11210/ca,NOC 9447,Cloth Tester,15.0
 /11211/ca,NOC 9447,Colour Matcher - Textiles,15.0
-/11212/ca,NOC 9447,Fabric Examiner,15.0
 /11213/ca,NOC 9447,Fabric Grader,15.0
 /11214/ca,NOC 9447,Fabric Inspector,15.0
 /11215/ca,NOC 9447,Fibre Examiner - Textiles,15.0
@@ -6709,6 +6707,7 @@ link,noc,job_title,salary
 /14557/ca,NOC 113,Material Manager,42.05
 /14558/ca,NOC 113,Merchandise Purchasing Director,42.05
 /14559/ca,NOC 113,Office Equipment Purchasing Manager,42.05
+/14560/ca,NOC 113,Electronic Components Purchasing Director,42.05
 /14561/ca,NOC 113,Contract Director,42.05
 /14562/ca,NOC 113,Purchasing Contracts Director,42.05
 /14563/ca,NOC 113,Supply Service Chief,42.05
@@ -7048,6 +7047,7 @@ link,noc,job_title,salary
 /15016/ca,NOC 7521,Buggy-operator Skinner,27.0
 /15017/ca,NOC 7521,Buggy-scraper Operator,27.0
 /15018/ca,NOC 7521,Bulldozer Operator,27.0
+/15019/ca,NOC 7521,Caterpillar Car Operator,27.0
 /15020/ca,NOC 7521,Concrete-grooving Machine Operator,27.0
 /15021/ca,NOC 7521,Concrete-paving Machine Operator,27.0
 /15022/ca,NOC 7521,Concrete Spreader Operator - Heavy Equipment,27.0
@@ -7326,6 +7326,7 @@ link,noc,job_title,salary
 /15437/ca,NOC 9418,Link Wire Machine Set-up Operator,18.16
 /15438/ca,NOC 9418,Link Wire Machine Tender,18.16
 /15439/ca,NOC 9418,"Loom Setter, Wire Weaving",18.16
+/15440/ca,NOC 9418,"Machine Tender, Nuts And Bolts",18.16
 /15441/ca,NOC 9418,Metal Awning Machine Operator,18.16
 /15442/ca,NOC 9418,"Sharpener Operator, Metal Blades",18.16
 /15443/ca,NOC 9418,Metal-bonding Equipment Operator,18.16
@@ -7469,8 +7470,8 @@ link,noc,job_title,salary
 /15581/ca,NOC 9611,Chalk Moulder - Mineral Products Processing,18.25
 /15582/ca,NOC 9611,Charge Weigher - Primary Metal Processing,18.25
 /15583/ca,NOC 9611,Charger Helper - Primary Metal Processing,18.25
+/15584/ca,NOC 9611,Cladding Assembler - Primary Metal Processing,18.25
 /15585/ca,NOC 9611,Classifier Helper - Primary Metal And Mineral Products Processing,18.25
-/15586/ca,NOC 9611,Clay Press Worker,18.25
 /15587/ca,NOC 9611,Coil Bander - Primary Metal Processing,18.25
 /15588/ca,NOC 9611,Coke Loader - Primary Metal Processing,18.25
 /15589/ca,NOC 9611,"Helper, Coke Oven Heater",18.25
@@ -8215,6 +8216,7 @@ link,noc,job_title,salary
 /16362/ca,NOC 5253,"Judge, Standardbreds - Racetrack",16.0
 /16363/ca,NOC 5253,"Judge, Track",16.0
 /16364/ca,NOC 5253,Figure Skating Evaluator,16.0
+/16365/ca,NOC 5253,Competitive Sports Judge,16.0
 /16366/ca,NOC 5253,Curling Judge,16.0
 /16367/ca,NOC 6211,Chief Canvasser - Retail,18.0
 /16369/ca,NOC 6211,"Department Head, Retail Store",18.0
@@ -8595,6 +8597,7 @@ link,noc,job_title,salary
 /16811/ca,NOC 7302,"Excavating, Grading And Paving Foreman/woman",33.0
 /16812/ca,NOC 7302,"Foreman/woman, Heavy Construction Crew",33.0
 /16813/ca,NOC 7302,"Supervisor, Well Drilling",33.0
+/16814/ca,NOC 7302,Road Maintenance Foreman/woman,33.0
 /16815/ca,NOC 7302,Bridge Construction Foreman/woman,33.0
 /16816/ca,NOC 7302,"Foreman/woman, Heavy Construction Labourers",33.0
 /16817/ca,NOC 7302,"Foreman/woman, Tarmac Paving",33.0
@@ -8625,6 +8628,7 @@ link,noc,job_title,salary
 /16842/ca,NOC 7231,Firearms Model Maker Machinist,25.68
 /16843/ca,NOC 7231,Gear Inspector-machinist,25.68
 /16844/ca,NOC 7231,Gear Tester-machinist,25.68
+/16845/ca,NOC 7231,General Machinist,25.68
 /16846/ca,NOC 7231,Machine Shop Inspector,25.68
 /16847/ca,NOC 7231,Machining Inspector,25.68
 /16848/ca,NOC 7231,"Inspector, Tool And Gauge",25.68
@@ -9201,6 +9205,19 @@ link,noc,job_title,salary
 /17483/ca,NOC 512,Ballet Company Director,30.77
 /17484/ca,NOC 512,Broadcasting Manager,30.77
 /17485/ca,NOC 512,Bureau Chief - News Agency,30.77
+/17486/ca,NOC 512,Copyright Manager - Publishing,30.77
+/17487/ca,NOC 512,Cost And Royalties Manager - Publishing,30.77
+/17488/ca,NOC 512,Dance Company Director,30.77
+/17489/ca,NOC 512,Opera Company Director,30.77
+/17490/ca,NOC 512,"Director, Radio Station Operations",30.77
+/17491/ca,NOC 512,Theatre Company Manager,30.77
+/17492/ca,NOC 512,Editor-in-chief,30.77
+/17493/ca,NOC 512,Editorial Chief,30.77
+/17494/ca,NOC 512,"Executive Producer, Films And Videos",30.77
+/17495/ca,NOC 512,Film Production Manager,30.77
+/17496/ca,NOC 512,"Manager, Newspaper",30.77
+/17497/ca,NOC 512,Book Publishing Manager,30.77
+/17498/ca,NOC 512,"Manager, Radio Station",30.77
 /17499/ca,NOC 512,Television Station Manager,30.77
 /17500/ca,NOC 512,Video Production Company Manager,30.77
 /17501/ca,NOC 512,Managing Editor,30.77
@@ -10599,6 +10616,7 @@ link,noc,job_title,salary
 /18957/ca,NOC 9536,Finished Enamel Sprayman/woman,21.4
 /18958/ca,NOC 9536,Spray Paint Machine Tender,21.4
 /18959/ca,NOC 9536,Metal Product Spray Painter,21.4
+/18960/ca,NOC 9536,Smoking-pipe Stainer,21.4
 /18961/ca,NOC 9536,"Refinisher, Stoves",21.4
 /18962/ca,NOC 9536,"Enameller, Tin Can Dipping",21.4
 /18963/ca,NOC 9536,Pencil-tip-banding Machine Tender,21.4
@@ -13145,6 +13163,7 @@ link,noc,job_title,salary
 /21679/ca,NOC 7514,Bakery Route Salesman/woman,17.5
 /21680/ca,NOC 7514,Bread Route Driver,17.5
 /21681/ca,NOC 7514,"Delivery Driver, Fast Food",17.5
+/21683/ca,NOC 7514,Small Van Driver,17.5
 /21684/ca,NOC 7514,Food Service Driver,17.5
 /21685/ca,NOC 7514,Groceries Deliverer,17.5
 /21686/ca,NOC 7514,Laundry Route Driver,17.5
@@ -14144,7 +14163,6 @@ link,noc,job_title,salary
 /22693/ca,NOC 2263,Occupational Health Inspector,36.5
 /22694/ca,NOC 2263,Environmental Health And Safety Technician,36.5
 /22695/ca,NOC 2263,Environmental Health And Safety Technologist,36.5
-/22696/ca,NOC 2263,Hazardous Waste Management Technologist,36.5
 /22697/ca,NOC 2263,Occupational Hygienist Technologist,36.5
 /22698/ca,NOC 2263,Beauty Salon Inspector,36.5
 /22699/ca,NOC 2263,Health And Safety Technician,36.5
@@ -15061,9 +15079,9 @@ link,noc,job_title,salary
 /23841/ca,NOC 9537,Hand Sample Container Maker,17.21
 /23842/ca,NOC 9537,"Assembler, Scales",17.21
 /23843/ca,NOC 9537,"Inspector, Scales",17.21
+/23844/ca,NOC 9537,Scale Maker,17.21
 /23845/ca,NOC 9537,"Assembler, Shells - Explosives",17.21
 /23846/ca,NOC 9537,"Decorator, Shoes - Footwear Manufacturing",17.21
-/23847/ca,NOC 9537,"Proof Tester, Shotguns",17.21
 /23848/ca,NOC 9537,"Assembler, Shower Doors And Panels",17.21
 /23849/ca,NOC 9537,Sign Maker,17.21
 /23850/ca,NOC 9537,"Finisher, Sleeping Bags",17.21
@@ -16116,6 +16134,7 @@ link,noc,job_title,salary
 /25133/ca,NOC 6235,Merchant Services Specialist - Financial,22.84
 /25134/ca,NOC 2112,Chemist - Biomolecular Assembly,32.82
 /25135/ca,NOC 2132,Micro-electro-mechanical Systems (MEMS) Research Engineer,39.18
+/25137/ca,NOC 2262,Pipeline Equipment Inspector,36.0
 /25138/ca,NOC 2262,Lifting Gear Inspector,36.0
 /25139/ca,NOC 2255,Aerological Observer,35.06
 /25140/ca,NOC 2255,Aerological Technician,35.06
@@ -16395,6 +16414,7 @@ link,noc,job_title,salary
 /25430/ca,NOC 9461,Cleaning And Classifying Operator - Tobacco Processing,17.6
 /25431/ca,NOC 9461,Conveyor Tender - Tobacco Processing,17.6
 /25432/ca,NOC 9461,Cooler Tender - Tobacco Processing,17.6
+/25433/ca,NOC 9461,"Cork Tipper, Cigarettes",17.6
 /25434/ca,NOC 9461,Crusher Operator - Tobacco Processing,17.6
 /25435/ca,NOC 9461,"Cutter, Tobacco Leaf",17.6
 /25436/ca,NOC 9461,Tobacco Dryer - Tobacco Processing,17.6
@@ -17146,7 +17166,6 @@ link,noc,job_title,salary
 /26265/ca,NOC 9537,Slide Fastener Chain Machine Tender,17.21
 /26266/ca,NOC 9537,Window Blind Mounter,17.21
 /26267/ca,NOC 9441,"Yarn Winder, Automatic",15.75
-/26268/ca,NOC 9537,Slide Fastener Machine Tender (except Plastic Products),17.21
 /26269/ca,NOC 9537,Slide-fastener-cutting Machine Operator,17.21
 /26270/ca,NOC 9441,Winder Operator - Textile Manufacturing,15.75
 /26271/ca,NOC 9537,Tracer-bullet-loading Machine Operator,17.21
@@ -17452,7 +17471,6 @@ link,noc,job_title,salary
 /26590/ca,NOC 7201,Construction Ironwork Contractor,33.65
 /26591/ca,NOC 7201,"Contractor, Ironwork",33.65
 /26592/ca,NOC 7201,"Contractor, Sheet Metal",33.65
-/26593/ca,NOC 7201,"Supervisor, Boilermakers",33.65
 /26594/ca,NOC 7201,"Contractor, Welding",33.65
 /26595/ca,NOC 7201,Coppersmith Foreman/woman,33.65
 /26596/ca,NOC 7201,"Foreman/woman, Blacksmiths",33.65
@@ -18065,6 +18083,7 @@ link,noc,job_title,salary
 /27289/ca,NOC 7381,Rotary Offset Press Operator,21.75
 /27290/ca,NOC 9241,Operating Engineer - Power Plant,35.0
 /27291/ca,NOC 9462,Air Knife Meat Cutter - Meat Packing Plant,19.0
+/27292/ca,NOC 9462,Chuck Cap Puller - Meat Packing Plant,19.0
 /27293/ca,NOC 9521,Composite Technician - Aircraft Assembly,26.61
 /27294/ca,NOC 9522,Composite Technician - Motor Vehicle Manufacturing,23.5
 /27295/ca,NOC 9531,Composite Technician - Boat Assembly,20.0
@@ -20433,7 +20452,6 @@ link,noc,job_title,salary
 /2534/ca,NOC 2111,Semiconductor Physicist,42.56
 /2535/ca,NOC 2111,Solid-state Physicist,42.56
 /2536/ca,NOC 2111,Space Physicist,42.56
-/2537/ca,NOC 2111,Theoretical Nuclear Physicist,42.56
 /2538/ca,NOC 2111,Thermal Physicist,42.56
 /2539/ca,NOC 2111,X-ray Physicist,42.56
 /2540/ca,NOC 2111,Elementary Particle Physicist,42.56
@@ -20484,6 +20502,7 @@ link,noc,job_title,salary
 /2586/ca,NOC 2114,Climatologist,46.15
 /2587/ca,NOC 2114,Hydrometeorologist,46.15
 /2588/ca,NOC 2114,Industrial Meteorologist,46.15
+/2589/ca,NOC 2114,Meteorologist,46.15
 /2591/ca,NOC 2114,Operational Meteorologist,46.15
 /2592/ca,NOC 2114,Weather Forecaster,46.15
 /2593/ca,NOC 2115,Ballistician,46.15
@@ -21020,6 +21039,7 @@ link,noc,job_title,salary
 /3157/ca,NOC 2221,Malacology Technician,25.33
 /3158/ca,NOC 2221,Natural Resources Technician - Biology,25.33
 /3159/ca,NOC 2221,Marine Biological Technician,25.33
+/3160/ca,NOC 2221,Agrology Technologist,25.33
 /3161/ca,NOC 2221,Pisciculture Bacteriological Technologist,25.33
 /3162/ca,NOC 2221,Agronomy Technologist,25.33
 /3163/ca,NOC 2221,Agricultural Sciences Technician,25.33
@@ -21113,7 +21133,6 @@ link,noc,job_title,salary
 /3252/ca,NOC 2232,Automation Technologist,31.5
 /3253/ca,NOC 2232,Home Automation Technician,31.5
 /3254/ca,NOC 2232,Robotics Servicing Technician,31.5
-/3255/ca,NOC 2232,Robotics Systems Installer And Repairer,31.5
 /3256/ca,NOC 2232,Robotics Technician,31.5
 /3257/ca,NOC 2234,Building Construction Estimator,31.25
 /3258/ca,NOC 2234,Chief Estimator - Construction,31.25
@@ -22558,6 +22577,7 @@ link,noc,job_title,salary
 /4769/ca,NOC 7233,Sheet Metal Patternmaker,30.5
 /4770/ca,NOC 7233,Metal Furniture Patternmaker,30.5
 /4771/ca,NOC 7233,Sheet Metal Worker,30.5
+/4772/ca,NOC 7233,Maintenance Sheet Metal Worker,30.5
 /4773/ca,NOC 7233,Sheet Metal Worker - Specialty Manufacturing,30.5
 /4774/ca,NOC 7233,Tinsmith - Sheet Metal Work,30.5
 /4775/ca,NOC 7233,Industrial Sheet Metal Worker,30.5
@@ -23502,6 +23522,7 @@ with A Mobility Impairment",26.0
 /5762/ca,NOC 5242,"Project Manager, Interior Design",21.0
 /5763/ca,NOC 5242,Retail Space Planner,21.0
 /5764/ca,NOC 5242,Registered Interior Designer,21.0
+/5765/ca,NOC 5242,Certified Interior Designer,21.0
 /5766/ca,NOC 5242,Licensed Interior Designer,21.0
 /5767/ca,NOC 5242,Space Management Consultant,21.0
 /5768/ca,NOC 5242,Designer - Interior Design,21.0
@@ -24737,6 +24758,7 @@ with A Mobility Impairment",26.0
 /295963/ca,NOC 13,Director Of Sustainability - Real Estate Development,53.08
 /295964/ca,NOC 912,Director Of Sustainability - Waste Management,54.87
 /295965/ca,NOC 912,Sustainability Program Director - Waste Management,54.87
+/295966/ca,NOC 912,Director Of Sustainable Design - Waste Management ,54.87
 /295967/ca,NOC 16,Director Of Sustainable Design - Commercial Products ,46.71
 /295968/ca,NOC 16,Director Of Sustainable Design - Real Estate Design ,46.71
 /295969/ca,NOC 13,"Corporate Social Responsibility (CSR) Vice-president - Financial, Communications And Other Business Services",53.08

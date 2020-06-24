@@ -1,5 +1,6 @@
 from flask import Flask, session, render_template, request, jsonify
 import os
+import pickle
 import pandas as pd
 import numpy as np
 from careerbuild.careerbuild.processing import uniqueness
@@ -24,12 +25,25 @@ skills_df = pd.read_csv('./careerbuild/static/job-skills.csv')
 job_name_df = pd.read_csv('./careerbuild/static/education-to-job.csv')
 df1 = pd.read_csv('./careerbuild/static/model-1.csv')
 df2 = pd.read_csv('./careerbuild/static/model-2.csv')
+hobby_df = pd.read_pickle('./careerbuild/static/hobby-topics.pkl')
+
+f = open('./careerbuild/static/hobbies.pkl', 'rb')
+hobbies_dict = pickle.load(f)
+f.close()
 
 
 @app.route('/',methods=["GET","POST"])
 def home_page():
-    hobbies = ['birdwatching','photography','team sports','']
+    hobbies = sorted(list(hobbies_dict.keys()))
     return render_template('index.html',hobbies=hobbies)  # render a template
+
+@app.route('/about',methods=["GET","POST"])
+def about_page():
+    return render_template('about.html')  # render a template
+
+@app.route('/contact',methods=["GET","POST"])
+def contact_page():
+    return render_template('contact.html')  # render a template
 
 
 @app.route('/suggestions',methods=["GET","POST"])
@@ -39,15 +53,17 @@ def recommendation_output():
 #
     # Pull input
     if request.method == 'GET':
-      edu_input =request.args.get('user_input')
+      edu_input =request.args.get('usr_degree')
+      hobby =request.args.get('usr_hobby')
+      session['hobby'] = hobby
       edu_names = list(job_name_df['education_groups'].unique())
       education_match = sorted([s for s in edu_names if edu_input.lower() in s.lower()])
     elif request.method == 'POST':
       edu_input = request.form.get('user_input')
       education_match[0] = edu_input
+      hobby = session.get('hobby', None)
     else:
       edu_input = ''
-
 
     # Case if empty
     if not edu_input:
@@ -69,7 +85,7 @@ def recommendation_output():
       session['degree'] = degree
 
       fig = build_sankey(job_name_df, degree)
-      results = uniqueness(df1,df2,degree)
+      results = uniqueness(df1,df2,degree,hobby_df,hobby)
 
       return render_template("results.html",
                           my_input=degree,
@@ -84,6 +100,7 @@ def recommendation_output():
                           job8=results[7],
                           job9=results[8],
                           job10=results[9],
+                          hobby=hobby,
                           my_form_result=4)
 
     # More than one match found, return all matches and allow the user to choose the open that makes the most sense

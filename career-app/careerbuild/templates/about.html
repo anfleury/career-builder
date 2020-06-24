@@ -76,30 +76,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-          <h2 class="section-heading">
-            Start your career exploration here
-          </h2>
 
-          <form action="/suggestions" id="user_input" method="GET">
-            <p>Type in the name of a degree you are currently taking or are thinking about taking.</p>
-              <input class="form-control" type="text" id="usr_degree" name='usr_degree' placeholder="e.g. 'Accounting'">
+            <p>Uniquely qualified is an app for career discovery. The app is designed to be used by students who have recently graduated or are nearing graduation, in order to explore career paths outside of their major. The app uses data from the National Graduate Survey to chart common and uncommon paths for users. Uncommon paths are derived from topics common to the typical careers and to an optional chosen hobby.</p>
 
-            <p>Do you have any hobbies that make you unique? Choose one from the list below to get personalized career suggestions.</p>
-              <select class="form-control" id="usr_hobby" name='usr_hobby'>
-                {% for hobby in hobbies %}
-                <option value= "{{hobby}}" SELECTED>{{hobby}}</option>"
-                {% endfor %}
-                <option value= '' SELECTED>None</option>"
-              </select>
-
-            <p></p>
-
-            <div class="clearfix">
-              <button type="submit" class="btn btn-primary float-right" form="user_input">
-                Explore
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </div>
