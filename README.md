@@ -8,7 +8,7 @@
 
 Website: http://uniquely-qualified.live
 
-### Introduction:
+### Introduction
 
 *Uniquely qualified* uses data from the National Graduate Survey to chart common and uncommon paths for users. To suggest uncommon paths, the app makes use of NLP and topic modeling to derive topics shared by the common career paths and an optional chosen hobby.
 
@@ -30,7 +30,7 @@ The idea for integrating hobbies/interests into consideration for career paths c
 
 Following this advice, graduates may want to integrate skills from hobbies or side projects into their job search to expand their possible options to find the careers they may be *uniquely qualified* for.
 
-### Setup and installation:
+### Setup and installation
 
 After cloning this repository, run the following code:
 
