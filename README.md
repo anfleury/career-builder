@@ -12,9 +12,9 @@ Uniquely qualified is an app for career discovery. The app is designed to be use
 
 The idea for integrating hobbies/interests into consideration for career paths comes from the idea of making yourself a double- or triple-threat by simply being above average in a number of different areas. This idea is decribed by the creator of the *Dilbert* comic strip in the quote below.
 
-> If you want an average successful life, it doesn’t take much planning. Just stay out of trouble, go to school, and apply for jobs you might like. But if you want something extraordinary, you have two paths:\
-1. Become the best at one specific thing.\
-2. Become very good (top 25%) at two or more things.
+> If you want an average successful life, it doesn’t take much planning. Just stay out of trouble, go to school, and apply for jobs you might like. But if you want something extraordinary, you have two paths:
+>1. Become the best at one specific thing.
+>2. Become very good (top 25%) at two or more things.
 >
 > The first strategy is difficult to the point of near impossibility. Few people will ever play in the NBA or make a platinum album. I don’t recommend anyone even try.
 >
