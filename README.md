@@ -34,11 +34,12 @@ Following this advice, graduates may want to integrate skills from hobbies or si
 
 After cloning this repository, run the following code:
 
-    cd career-app/career-build
+    cd career-builder/career-app/career-build
     pip install -r requirements.txt
 
 The app can then be run locally using:
 
+    cd ..
     cd ..
     python run.py
 
