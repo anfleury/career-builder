@@ -3,12 +3,9 @@ import numpy as np
 from scipy import spatial
 from fuzzywuzzy import process
 
-def uniqueness(df1,df2,group,hobby_df,hobby):
 
+def uniqueness(df1,df2,group,hobby_df,hobby, hobby_multiplier=6):
     '''Function takes in two dataframes containing information about education and common career paths, and information about user hobbies. The output is a list of uncommon careers that share topic similarity with comon careers and hobbies.'''
-
-    # How much should the hobby affect the results?
-    hobby_multiplier = 6
 
     # Find common jobs for given education group
     group_jobs = df1.where(df1['education_groups']==group).dropna().drop_duplicates(['top_jobs'])
