@@ -85,7 +85,11 @@ def recommendation_output():
       session['degree'] = degree
 
       fig = build_sankey(job_name_df, degree)
-      results = uniqueness(df1,df2,degree,hobby_df,hobby)
+      hobby_mult = 4
+      results = uniqueness(df1, df2, degree, hobby_df, hobby, hobby_multiplier=hobby_mult)
+      results2 = uniqueness(df1, df2, degree, hobby_df, False)
+      overlap = len(list(set(results) & set(results2))) / len(results)
+      print('Hobby multiplier {} gives {:.0f}% new job recommendations.'.format(hobby_mult, (1 - overlap)*100))
 
       return render_template("results.html",
                           my_input=degree,
